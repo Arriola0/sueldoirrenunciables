@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.section-salario, .seccion-bonificacion, .section-aguinaldo, .section-vacaciones{
+    margin-left: 5px;
+    text-align: center;
+    border: 1px solid #000;
+}
+.tituloA{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.titulos, .tituloA{
+    font-size: 3rem;
+    margin-top: 10px;
+}
+.info{
+    font-size: 2.5rem;
+    padding: 10px 5px 10px 5px;
+}
+.respuestas{
+width: 300px;
+height: 25px;
+background: #0003;
+border-radius: 5px;
+font-size: 2rem;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+.salarioreal, .respuestaBonificacionB, .respuestaAguinaldo, .respuestaVacacionesE{
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+.btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+

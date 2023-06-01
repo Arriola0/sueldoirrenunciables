@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Salario</title>
+</head>
+<body>
+
+
+    <h1 class="tituloA">IRENUNCIABLES</h1>
+
+    <div class="section-salario" id="section-salario">
+
+        <h1 class="titulos">Salario</h1>
+
+        <p class="info">Escriba el salario Mensual</p>
+        <input type="number" id="salarioMensual" >
+
+
+        <p class="info">Escriba el DIA de despido o renuncia:</p>
+        <input type="number" id="diaDespido">
+
+
+        <input type="button" value="REALIZAR EJERCICIO" id="btnSalario" class="btn">
+
+        <h1 class="titulos">Respuestas:</h1>
+
+        <p class="info">Sueldo diario</p>
+        <div id="respuestaA" class="respuestas"></div>
+
+
+        <p class="info">Sueldo antes de IGSS y ISR</p>
+        <div id="respuestaB" class="respuestas"></div>
+
+
+        <p class="info">Resultado IGSS</p>
+        <div id="respuestaC" class="respuestas"></div>
+
+        <p class="info">Resultado ISR</p>
+        <div id="respuestaD" class="respuestas"></div>
+
+
+        <p class="info">Salario a la fecha de despido</p>
+        <div id="respuestaE" class="respuestas salarioreal"></div>
+
+
+    </div>
+
+
+
+        <div class="seccion-bonificacion">
+
+
+            <h1 class="titulos">Bonificacion Incentivo Proporcional</h1>
+            <p class="info">Escriba el Dia del despido:</p>
+            <input type="number" id="diaDespidoBonificacion">
+
+            <p class="info">Escriba salario a la fecha de despido:</p>
+            <input type="number" id="sueldoRealEnBonificacion">
+            
+            <button id="btnBonificacion" class="btn">REALIZAR BONIFICACION</button>
+
+            <p class="info">Bonificacion hasta la fecha de despido</p>
+            <div class="respuestas" id="respuestaBonificacionA"></div>
+
+            <p class="info">sueldo a la fecha + bonificacion a la fecha</p>
+            <div class="respuestas respuestaBonificacionB" id="respuestaBonificacionB"></div>
+
+
+
+        </div>
+
+
+
+        <div class="section-aguinaldo">
+
+
+            <h1 class="titulos">Aguinaldo</h1>
+
+            <p class="info">Escriba el sueldo que debengaba mensualmente</p>
+            <input type="number" id="salarioMenusalAguinaldo">
+
+            <p class="info">Escriba el Dia de Despido</p>
+            <input type="number" id="diaDespidoAguinaldo">
+
+            <p class="info">Escriba el Mes de despido en Numero</p>
+            <input type="number" id="mesDespido">
+
+
+            <button id="btnAguinaldo" class="btn">REALIZAR OPERACION AGUINALDO</button>
+
+            <p class="info">Este es el aguinaldo hasta la fecha</p>
+            <div class="respuestas respuestaAguinaldo" id="respuestaAguinaldo"></div>
+
+
+        </div>
+
+
+
+        <div class="section-vacaciones">
+
+
+            <h1 class="titulos">Vacaciones</h1>
+
+
+            <p class="info">Salario devengado Mensualmente</p>
+            <input type="number" id="salarioMensualVacaciones">
+
+            <p class="info">Escriba el dia de Inicio de trabajo</p>
+            <input type="number" id="diaInicioTrabajoVacaciones">
+
+            <p class="info">Escriba el Mes de inicio de trabajo en Numeros</p>
+            <input type="number"  id="mesInicioTrabajoVacaciones"> 
+
+            <p class="info">Escriba el Dia de Despido</p>
+            <input type="number" id="diaDespidoVacaciones">
+
+            <p class="info">Escriba el Mes en numeros del dia de Despido</p>
+            <input type="number" id="mesDespidoVacaciones">
+
+            <button id="btnVacaciones" class="btn">REALIZAR OPERACION VACACIONES</button>
+
+            <p class="info">Total de Dias</p>
+            <div id="respuestaVacacionesA" class="respuestas"></div>
+
+            <p class="info">Dias a pagar</p>
+            <div id="respuestaVacacionesB" class="respuestas"></div>
+
+            <p class="info">Dias a pagar pero redondiado</p>
+            <div id="respuestaVacacionesC" class="respuestas"></div>
+
+
+            <p class="info">Sueldo antes de IGSS e ISR</p>
+            <div id="respuestaVacacionesD" class="respuestas"></div>
+
+
+            <p class="info">IGSS</p>
+            <div id="respuestaVacacionesE" class="respuestas"></div>
+
+
+            <p class="info">ISR</p>
+            <div id="respuestaVacacionesF" class="respuestas"></div>
+
+            <p class="info">Resultado Vacaciones</p>
+            <div id="respuestaVacacionesG" class="respuestas respuestaVacacionesE"></div>
+
+        </div>
+
+
+
+
+
+    <script src="./java.js"></script>
+</body>
+</html>
