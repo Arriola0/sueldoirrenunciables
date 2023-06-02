@@ -4,12 +4,12 @@ const salarioMensual = document.getElementById("salarioMensual");
 const btnSalario = document.getElementById("btnSalario");
 const diaDespido = document.getElementById("diaDespido");
 
+const respuestaProcedimientoSalarioA = document.getElementById("respuestaProcedimientoSalarioA");
+const respuestaProcedimientoSalarioB = document.getElementById("respuestaProcedimientoSalarioB");
+const respuestaProcedimientoSalarioC = document.getElementById("respuestaProcedimientoSalarioC");
+const respuestaProcedimientoSalarioD = document.getElementById("respuestaProcedimientoSalarioD");
+const respuestaProcedimientoSalarioE = document.getElementById("respuestaProcedimientoSalarioE");
 
-const respuestaA = document.getElementById("respuestaA");
-const respuestaB = document.getElementById("respuestaB");
-const respuestaC = document.getElementById("respuestaC");
-const respuestaD = document.getElementById("respuestaD");
-const respuestaE = document.getElementById("respuestaE");
 
 
 //aqui estan las variables de la bonificacion.
@@ -17,8 +17,8 @@ const diaDespidoBonificacion = document.getElementById("diaDespidoBonificacion")
 const sueldoRealEnBonificacion = document.getElementById("sueldoRealEnBonificacion");
 const btnBonificacion = document.getElementById("btnBonificacion");
 
-const respuestaBonificacionA = document.getElementById("respuestaBonificacionA");
-const respuestaBonificacionB = document.getElementById("respuestaBonificacionB");
+const respuestaProcedimientoBonificacionA = document.getElementById("respuestaProcedimientoBonificacionA");
+const respuestaProcedimientoBonificacionB = document.getElementById("respuestaProcedimientoBonificacionB");
 
 
 //aqui estan la variables del aguinaldo
@@ -28,6 +28,8 @@ const mesDespido = document.getElementById("mesDespido");
 const btnAguinaldo = document.getElementById("btnAguinaldo");
 
 const respuestaAguinaldo = document.getElementById("respuestaAguinaldo");
+
+const respuestaProcedimientoAguinaldo = document.getElementById("respuestaProcedimientoAguinaldo");
 
 
 //aqui estan las variable de las vacaciones
@@ -48,23 +50,46 @@ const respuestaVacacionesF = document.getElementById("respuestaVacacionesF");
 const respuestaVacacionesG = document.getElementById("respuestaVacacionesG");
 
 
+
+
+const respusetaProcedimientoVacacionesA = document.getElementById("respusetaProcedimientoVacacionesA");
+const respusetaProcedimientoVacacionesB = document.getElementById("respusetaProcedimientoVacacionesB");
+const respusetaProcedimientoVacacionesC = document.getElementById("respusetaProcedimientoVacacionesC");
+const respusetaProcedimientoVacacionesD = document.getElementById("respusetaProcedimientoVacacionesD");
+const respusetaProcedimientoVacacionesE = document.getElementById("respusetaProcedimientoVacacionesE");
+const respusetaProcedimientoVacacionesF = document.getElementById("respusetaProcedimientoVacacionesF");
+const respusetaProcedimientoVacacionesG = document.getElementById("respusetaProcedimientoVacacionesG");
+
+
 //funcion para el salario
 btnSalario.addEventListener("click", ()=>{
     let salarioDiario = salarioMensual.value / 30;
-    respuestaA.innerHTML = salarioDiario;
 
     let nuevoSalario = salarioDiario * diaDespido.value;
-    respuestaB.innerHTML = nuevoSalario;
 
-    igss = (nuevoSalario * 4.83)/100;
-    respuestaC.innerHTML = igss;
+    let igss = (nuevoSalario * 4.83)/100;
 
-    isr = (nuevoSalario * 5)/100;
-    respuestaD.innerHTML = isr;
+    let isr = (nuevoSalario * 5)/100;
+    
+    let sueldoReal = nuevoSalario - igss - isr;
+    
 
-    sueldoReal = nuevoSalario - igss - isr;
-    respuestaE.innerHTML = sueldoReal
+//procedimeinto del salario
+
+respuestaProcedimientoSalarioA.innerHTML = `${salarioMensual.value} / 30 = <b>${salarioDiario}</b>`;
+
+respuestaProcedimientoSalarioB.innerHTML = `${salarioDiario} * ${diaDespido.value} = <b>${nuevoSalario}</b>`;
+
+respuestaProcedimientoSalarioC.innerHTML = `${nuevoSalario} * 4.83% = <b>${igss}</b>`;
+
+respuestaProcedimientoSalarioD.innerHTML = `${nuevoSalario} * 5% = <b>${isr}</b>`;
+
+respuestaProcedimientoSalarioE.innerHTML = `${nuevoSalario} - ${igss} - ${isr} = <b>${sueldoReal}</b>`;
+
+
 });
+
+
 
 
 
@@ -74,10 +99,17 @@ btnBonificacion.addEventListener("click", ()=>{
     let diasMes = 30;
 
     let bonoAFecha = (diaDespidoBonificacion.value * bono)/diasMes;
-    respuestaBonificacionA.innerHTML = bonoAFecha;
 
     let sueldoMasBono = parseFloat(sueldoRealEnBonificacion.value) + bonoAFecha;
-    respuestaBonificacionB.innerHTML = sueldoMasBono;
+
+
+//procedimiento de la bonificacion
+
+    respuestaProcedimientoBonificacionA.innerHTML = `${bono} * ${diaDespidoBonificacion.value} / ${diasMes} = <b>${bonoAFecha}</b>`;
+
+    respuestaProcedimientoBonificacionB.innerHTML = `${sueldoRealEnBonificacion.value} + ${bonoAFecha} = <b>${sueldoMasBono}</b>`;
+
+
 
 });
 
@@ -90,10 +122,16 @@ btnAguinaldo.addEventListener("click", ()=>{
    let totaldiasAguinaldo = totalMeses * 30;
    let diasMesMasFechaDespido = parseFloat(totaldiasAguinaldo) + parseFloat(diaDespidoAguinaldo.value);
    
-   
     let resultadoAguinaldo = (salarioMenusalAguinaldo.value * diasMesMasFechaDespido)/ diasAnio;
-    respuestaAguinaldo.innerHTML = resultadoAguinaldo;
+
+//procedimiento del aguinaldo
+
+    respuestaProcedimientoAguinaldo.innerHTML = `${salarioMenusalAguinaldo.value} * ${diasMesMasFechaDespido} / ${diasAnio} = <b>${resultadoAguinaldo}</b>`;
+
+
 });
+
+
 
 
 //funcion de las vacaciones
@@ -127,38 +165,43 @@ var sumaDiasIncompletos = parseFloat(30 - diaInicioTrabajoVacaciones.value) + pa
     }
 
 
-    if(diasVacasA < 360){
-        respuestaVacacionesA.innerHTML = diasVacasA;
-    }
-    else if (diasVacasA = 360){
-        respuestaVacacionesA.innerHTML = "OJO, porque ya son 360 dias"
-    }
 
     let diasAPagar = (diasVacasA * derechoVacas) / diasAnio;
-    respuestaVacacionesB.innerHTML = diasAPagar;
+    
 
     let diasAPagarAproxi = Math.ceil(diasAPagar)
-    respuestaVacacionesC.innerHTML = diasAPagarAproxi;
-
 
 
 let sueldoPorDiaVacas = salarioMensualVacaciones.value / 30; 
 
 let sueldoAntesIgssIsrr = sueldoPorDiaVacas *  diasAPagarAproxi;
-respuestaVacacionesD.innerHTML = sueldoAntesIgssIsrr;
+
 
     let igss = (sueldoAntesIgssIsrr * 4.83) / 100;
-    respuestaVacacionesE.innerHTML = igss;
 
 
     let isrVacas = (sueldoAntesIgssIsrr * 5) / 100;
-    respuestaVacacionesF.innerHTML = isrVacas; 
 
     let resultadoVacaciones = sueldoAntesIgssIsrr - igss - isrVacas;
-    respuestaVacacionesG.innerHTML = resultadoVacaciones;
-    
 
-})
+
+//procedimiento de vacaciones
+
+
+
+respusetaProcedimientoVacacionesA.innerHTML = `Es un proceso largo, por eso solo muestro el resultado = <b>${diasVacasA}</b>`;
+respusetaProcedimientoVacacionesB.innerHTML = `${diasVacasA} * ${derechoVacas} / ${diasAnio} = <b>${diasAPagar}</b>`;
+respusetaProcedimientoVacacionesC.innerHTML = `Aqui solo aproximamos el resultado anterior = <b>${diasAPagarAproxi}</b>`;
+respusetaProcedimientoVacacionesD.innerHTML = `${salarioMensualVacaciones.value}/ 30 * ${diasAPagarAproxi} = <b>${sueldoAntesIgssIsrr}</b>`;
+respusetaProcedimientoVacacionesE.innerHTML = `${sueldoAntesIgssIsrr} * 4.83% = <b>${igss}</b>`;
+respusetaProcedimientoVacacionesF.innerHTML = `${sueldoAntesIgssIsrr} * 5% = <b>${isrVacas}</b>`;
+respusetaProcedimientoVacacionesG.innerHTML = `${sueldoAntesIgssIsrr} - ${igss} - ${isrVacas} = <b>${resultadoVacaciones}</b>`;
+
+
+
+
+
+});
 
 
 
