@@ -157,11 +157,11 @@ var sumaDiasIncompletos = parseFloat(30 - diaInicioTrabajoVacaciones.value) + pa
         diasVacasA = diasVacasA + sumaDiasIncompletos;
 
     }
-    else if(mesDespidoVacaciones.value > mesInicioTrabajoVacaciones.value){
-        mesesA = (mesDespidoVacaciones.value - mesInicioTrabajoVacaciones.value) -1;
-        mesesA = mesesA *30;
+    else if(parseFloat(mesDespidoVacaciones.value) > parseFloat(mesInicioTrabajoVacaciones.value)){
+        var mesesC = (mesDespidoVacaciones.value - mesInicioTrabajoVacaciones.value) -1;
+        mesesC = mesesC *30;
 
-        diasVacasA = mesesA + sumaDiasIncompletos;
+        diasVacasA = mesesC + sumaDiasIncompletos;
     }
 
 
