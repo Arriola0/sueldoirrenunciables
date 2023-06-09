@@ -9,17 +9,29 @@ html{
 }
 
 .section-salario, .seccion-bonificacion, .section-aguinaldo, .section-vacaciones{
-    margin-left: 5px;
     text-align: center;
-    border: 1px solid #000;
+}
+.section-salario{
+    background-image: radial-gradient(circle at 49.15% 50.59%, #ff9f50 0, #ff9056 12.5%, #ff805b 25%, #ff705e 37.5%, #fc5f5f 50%, #e7505f 62.5%, #d4435f 75%, #c2395f 87.5%, #b2315f 100%);
+}
+
+.seccion-bonificacion{
+    background-image: radial-gradient(circle at 48.59% 46.13%, #ffff9b 0, #ffff97 12.5%, #ffff93 25%, #f4ff8f 37.5%, #d5f58b 50%, #b8e387 62.5%, #a0d384 75%, #8bc682 87.5%, #79ba81 100%);
+}
+.section-aguinaldo{
+    background-image: radial-gradient(circle at 49.19% 47.77%, #a7ffff 0, #9affff 16.67%, #92ffff 33.33%, #8bf1f5 50%, #86d4dc 66.67%, #81bbc5 83.33%, #7da6b0 100%);
+}
+.section-vacaciones{
+    background-image: radial-gradient(circle at 48.59% 46.13%, #ffbacb 0, #ffb0cd 12.5%, #ffa4ca 25%, #ff98c5 37.5%, #f58bbb 50%, #d67eaf 62.5%, #bb74a4 75%, #a46b9a 87.5%, #906391 100%);
 }
 .tituloA{
     text-align: center;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    background: radial-gradient(circle, rgba(130,255,246,1) 14%, rgba(0,165,199,1) 100%);
 }
 .titulos, .tituloA{
     font-size: 3rem;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 .info{
     font-size: 2.5rem;
@@ -45,6 +57,7 @@ html{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    color: #fff;
 }
 .procedimientoSalario, .procedimientoBonificacion, .procedimientoAguinaldo, .procedimientoVacaciones{
     padding-bottom: 25px;
@@ -58,10 +71,28 @@ html{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background: transparent;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+    box-shadow: rgb(150, 150, 150) 5px 5px 20px;
+}
+.btn:hover{
+    font-size: 1.5rem;
 }
 
-
+.inputs{
+    text-align: center;
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid #0003;
+}
 
 
 
